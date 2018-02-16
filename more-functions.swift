@@ -22,8 +22,6 @@ In this lab you MAY NOT USE ANY BUILT-IN FUNCTION other than the basic operators
 public func twiceInteger(int: Int) -> Int {
         return int+int
     }
-    print(twiceInteger(int: 2)) 
-
 
 
 /********************************************************************************
@@ -34,7 +32,6 @@ public func twiceInteger(int: Int) -> Int {
 public func fiveInteger(int: Int) -> Int {
         return int+int+int+int+int
     }
-    print(fiveInteger(int: 5))
 
 
 /********************************************************************************
@@ -46,8 +43,7 @@ public func fiveInteger(int: Int) -> Int {
 public func tenInteger(int: Int) -> Int {
         return int + int + int + int + int + int + int + int + int + int
     }
-    print(tenInteger(int: 10))
-
+ 
 /********************************************************************************
 ( 4) Define a function which accepts a double argument and returns an integer 
      such that the integer returned is the greatest integer that is less than or 
@@ -57,8 +53,6 @@ public func tenInteger(int: Int) -> Int {
 public func floor(double: Double) -> Int {
         return Int(double);
     }
-    print(floor(double: 9.9))
-
 
 /********************************************************************************
 ( 5) Define a function which accepts a double argument and returns an integer
@@ -72,8 +66,6 @@ public func ceiling(double: Double) -> Int {
         }
         return Int(double);
     }
-    print(ceiling(double: 20.1))
-
   
 /********************************************************************************
 ( 6) Define a function which accepts a string argument and returns a string
@@ -83,8 +75,6 @@ public func ceiling(double: Double) -> Int {
 public func doubleString(string:String) -> String {
         return string + string;
     }
-    print(doubleString(string:"hello"))
-
 
 
 /********************************************************************************
@@ -101,8 +91,6 @@ public func repeatString(string:String, times:Int) -> String {
             }
         return returnString; 
     }
-    print(repeatString(string:"hello", times: 5))
-
 
 /********************************************************************************
 ( 8) Define a function which accepts an integer argument and returns a string
@@ -113,8 +101,6 @@ public func repeatString(string:String, times:Int) -> String {
 public func intToString(int:Int) -> String {
         return String(int);
     }
-    print(intToString(int: 123))
-
 
 /********************************************************************************
 ( 9) Define a function which accepts a double argument and returns a string
@@ -125,7 +111,6 @@ public func intToString(int:Int) -> String {
 public func doubleToString(double:Double) -> String {
         return String(double);
     }
-    print(doubleToString(double:123.45))
 
 
 
@@ -137,15 +122,14 @@ public func doubleToString(double:Double) -> String {
 
 public func returnFactorial(int:Int) -> Int {
         // the product of an integer and all the integers below it; e.g., factorial four ( 4! ) is equal to 24.
-        var total = 0;
-        for i in 1..<int  {
+        var total = 1;
+        for i in 1...int  {
             print("Multipling: \(int) by  \(i)")
             print("Total: \(total)")
-            total += int * i 
+            total *= i 
         }
         return total;
     }
-    print(returnFactorial(int:4))
 
 
 /********************************************************************************
@@ -160,7 +144,6 @@ public func gucci(nth:Int) -> Int {
         if (nth <= 1) { return nth; }
         return gucci(nth: nth-1) + gucci(nth: nth-2); 
     }
-    print("Gucci: \(gucci(nth:9))")
   
     
 /********************************************************************************
@@ -172,7 +155,6 @@ public func gucci(nth:Int) -> Int {
 public func rightTriangle(sideA:Double, sideB:Double) -> Double {
         return sideA*sideA + sideB*sideB;
     }
-    print(rightTriangle(sideA: 2, sideB: 2))
 
 
 /********************************************************************************
@@ -188,7 +170,6 @@ public func isPrime(int: Int ) -> Bool {
         return true; 
     }
 
-    print(isPrime(int:37))
 
 /********************************************************************************
 (14) Define a function which accepts an integer argument and returns the count
@@ -203,6 +184,4 @@ public func countPrimes(int:Int) -> Int {
             print("\(i) is NOT prime!");
         }
         return count;
-    }
-    print(countPrimes(int: 15));
-  
+    }  
