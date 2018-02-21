@@ -1,8 +1,10 @@
 // Allen ISD Computer Science Assignment
 // More Functions Test Harness
-// John Williams
-// Computer Science III, Period 5
+// John Nguyen
+// Computer Science II, Period 6
 // 2018.02.09
+
+import myFunctions
 
 /********************************************************************************
 As always, READ ALL INSTRUCTIONS!!!
@@ -84,3 +86,23 @@ Steps to follow:
     ./main 12 15.5 27.2 hello
 
 ********************************************************************************/
+
+let inputInt = Int(CommandLine.arguments[1])!
+let inputDoubleA = Double(CommandLine.arguments[2])!
+let inputDoubleB = Double(CommandLine.arguments[3])!
+let inputString = (CommandLine.arguments[4])
+
+print("Function 1 returned: \(twiceInteger(int: inputInt))")
+print("Function 2 returned: \(fiveInteger(int: inputInt))")
+print("Function 3 returned: \(tenInteger(int: inputInt))")
+print("Function 4 returned: \(floor(double: inputDoubleA))")
+print("Function 5 returned: \(ceiling(double: inputDoubleB))")
+print("Function 6 returned: \(doubleString(string: inputString))")
+print("Function 7 returned: \(repeatString(string: inputString, times: inputInt))")
+print("Function 8 returned: \(intToString(int: inputInt))")
+print("Function 9 returned: \(doubleToString(double: inputDoubleA))")
+print("Function 10 returned: \(returnFactorial(int: inputInt))")
+print("Function 11 returned: \(gucci(nth: inputInt))")
+print("Function 12 returned: \(rightTriangle(sideA: inputDoubleA, sideB: inputDoubleB))")
+print("Function 13 returned: \(isPrime(int: inputInt))")
+print("Function 14 returned: \(countPrimes(int: inputInt))")
