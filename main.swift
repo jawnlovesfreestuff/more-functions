@@ -86,33 +86,34 @@ Steps to follow:
     ./main 12 15.5 27.2 hello
 
 ********************************************************************************/
+
 print("Please input: int double double string - else, enter an interactive mode")
-let inputInt = Int(CommandLine.arguments[1])!
-let inputDoubleA = Double(CommandLine.arguments[2])!
-let inputDoubleB = Double(CommandLine.arguments[3])!
-let inputString = (CommandLine.arguments[4])
 
-
-print("Function 1 returned: \(twiceInteger(int: inputInt))")
-print("Function 2 returned: \(fiveInteger(int: inputInt))")
-print("Function 3 returned: \(tenInteger(int: inputInt))")
-print("Function 4 returned: \(floor(double: inputDoubleA))")
-print("Function 5 returned: \(ceiling(double: inputDoubleB))")
-print("Function 6 returned: \(doubleString(string: inputString))")
-print("Function 7 returned: \(repeatString(string: inputString, times: inputInt))")
-print("Function 8 returned: \(intToString(int: inputInt))")
-print("Function 9 returned: \(doubleToString(double: inputDoubleA))")
-print("Function 10 returned: \(returnFactorial(int: inputInt))")
-print("Function 11 returned: \(gucci(nth: inputInt))")
-print("Function 12 returned: \(rightTriangle(sideA: inputDoubleA, sideB: inputDoubleB))")
-print("Function 13 returned: \(isPrime(int: inputInt))")
-print("Function 14 returned: \(countPrimes(int: inputInt))")
-
-
-if let inputI = readLine() {
-    print("Input accepted!")
+var exit = false;
+if(CommandLine.argc > 1){
+    exit = true;
+    let inputInt = Int(CommandLine.arguments[1])!
+    let inputDoubleA = Double(CommandLine.arguments[2])!
+    let inputDoubleB = Double(CommandLine.arguments[3])!
+    let inputString = (CommandLine.arguments[4])
+    print("Function 1 returned: \(twiceInteger(int: inputInt))")
+    print("Function 2 returned: \(fiveInteger(int: inputInt))")
+    print("Function 3 returned: \(tenInteger(int: inputInt))")
+    print("Function 4 returned: \(floor(double: inputDoubleA))")
+    print("Function 5 returned: \(ceiling(double: inputDoubleB))")
+    print("Function 6 returned: \(doubleString(string: inputString))")
+    print("Function 7 returned: \(repeatString(string: inputString, times: inputInt))")
+    print("Function 8 returned: \(intToString(int: inputInt))")
+    print("Function 9 returned: \(doubleToString(double: inputDoubleA))")
+    print("Function 10 returned: \(returnFactorial(int: inputInt))")
+    print("Function 11 returned: \(gucci(nth: inputInt))")
+    print("Function 12 returned: \(rightTriangle(sideA: inputDoubleA, sideB: inputDoubleB))")
+    print("Function 13 returned: \(isPrime(int: inputInt))")
+    print("Function 14 returned: \(countPrimes(int: inputInt))")
 }
-else {
+
+
+while(!exit){
     print("Options Menu:")
     print("Type the number in order to select")
     print("0. Exit")
@@ -120,4 +121,31 @@ else {
     print("2. Function 2: Multiply by 5")
     print("3. Function 3: Multiply by 10")
     print("4. Function 4: Floor")
+
+
+    if let inputI = readLine() {
+        print("Input accepted!")
+        if(inputI == "0") { print("Exiting!"); exit = true; }
+        else if(inputI == "1") {
+            print("Function 1: Please input an int");
+            let intIn = readLine()
+            print(twiceInteger(int: intIn))
+        }
+        else if(inputI == "2") { }
+        else if(inputI == "3") { }
+        else if(inputI == "4") { }
+        else if(inputI == "5") { }
+        else if(inputI == "6") { }
+        else if(inputI == "7") { }
+        else if(inputI == "8") { }
+        else if(inputI == "9") { }
+        else if(inputI == "10") { }
+        else if(inputI == "11") { }
+        else if(inputI == "12") { }
+        else if(inputI == "13") { }
+        else if(inputI == "14") { }
+        
+    }
+    print("Input denied!")
+    
 }
