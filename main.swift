@@ -86,11 +86,12 @@ Steps to follow:
     ./main 12 15.5 27.2 hello
 
 ********************************************************************************/
-
+print("Please input: int double double string - else, enter an interactive mode")
 let inputInt = Int(CommandLine.arguments[1])!
 let inputDoubleA = Double(CommandLine.arguments[2])!
 let inputDoubleB = Double(CommandLine.arguments[3])!
 let inputString = (CommandLine.arguments[4])
+
 
 print("Function 1 returned: \(twiceInteger(int: inputInt))")
 print("Function 2 returned: \(fiveInteger(int: inputInt))")
@@ -106,3 +107,17 @@ print("Function 11 returned: \(gucci(nth: inputInt))")
 print("Function 12 returned: \(rightTriangle(sideA: inputDoubleA, sideB: inputDoubleB))")
 print("Function 13 returned: \(isPrime(int: inputInt))")
 print("Function 14 returned: \(countPrimes(int: inputInt))")
+
+
+if let inputI = readLine() {
+    print("Input accepted!")
+}
+else {
+    print("Options Menu:")
+    print("Type the number in order to select")
+    print("0. Exit")
+    print("1. Function 1: Multiply by 2")
+    print("2. Function 2: Multiply by 5")
+    print("3. Function 3: Multiply by 10")
+    print("4. Function 4: Floor")
+}
