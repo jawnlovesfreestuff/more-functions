@@ -112,6 +112,35 @@ if(CommandLine.argc > 1){
     print("Function 14 returned: \(countPrimes(int: inputInt))")
 }
 
+func intInF() -> Int {
+    var a : Int? = nil
+    while(a == nil) {
+        if let line = readLine() {
+            a = Int(line)
+        }
+    }
+    return a!
+}
+
+func doubleInF() -> Double {
+    var a : Double? = nil
+    while(a == nil) {
+        if let line = readLine() {
+            a = Double(line)
+        }
+    }
+    return a!
+}
+
+func stringInF() -> String {
+    var a : String? = nil
+    while(a == nil) {
+        if let line = readLine() {
+            a = line
+        }
+    }
+    return a!
+}
 
 while(!exit){
     print("============================================")
@@ -134,81 +163,79 @@ while(!exit){
     print("14. Function 14: Count Primes")
     print("============================================")
     if let inputI = readLine() {
-        if(Int(inputI)! < 14 && Int(inputI)! >= "0") {print("Input accepted!")}
-        else{print("Input denied!")}
         if(inputI == "0") { print("Exiting!"); exit = true; }
         else if(inputI == "1") {
             print("Function 1: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(twiceInteger(int: intIn))
         }
         else if(inputI == "2") {
             print("Function 2: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(fiveInteger(int: intIn))
         }
         else if(inputI == "3") {
             print("Function 3: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(tenInteger(int: intIn))
         }
         else if(inputI == "4") {
             print("Function 4: Please input a double");
-            let doubleIn = Double(readLine()!)!
+            let doubleIn = doubleInF()
             print(floor(double: doubleIn))
         }
         else if(inputI == "5") {
             print("Function 5: Please input a double");
-            let doubleIn = Double(readLine()!)!
+            let doubleIn = doubleInF()
             print(ceiling(double: doubleIn))
         }
         else if(inputI == "6") {
             print("Function 6: Please input a string");
-            let stringIn = readLine()!
+            let stringIn = stringInF()
             print(doubleString(string: stringIn))
         }
         else if(inputI == "7") {
             print("Function 7: Please input a string");
-            let stringIn = readLine()!
+            let stringIn = stringInF()
             print("Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(repeatString(string: stringIn, times: intIn))
         }
         else if(inputI == "8") {
             print("Function 8: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(intToString(int: intIn))
         }
         else if(inputI == "9") {
             print("Function 9: Please input a double");
-            let doubleIn = Double(readLine()!)!
+            let doubleIn = doubleInF()
             print(doubleToString(double: doubleIn))
         }
         else if(inputI == "10") {
             print("Function 10: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(returnFactorial(int: intIn))
         }
         else if(inputI == "11") {
             print("Function 11: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(gucci(nth: intIn))
         }
         else if(inputI == "12") {
             print("Function 12: Please input a double");
-            let doubleInA = Double(readLine()!)!
+            let doubleInA = doubleInF()
             print("Please input a double")
-            let doubleInB = Double(readLine()!)!
+            let doubleInB = doubleInF()
             print(rightTriangle(sideA:doubleInA, sideB:doubleInB))
         }
         else if(inputI == "13") {
             print("Function 13: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(isPrime(int: intIn))
         }
         else if(inputI == "14") {
             print("Function 14: Please input an int");
-            let intIn = Int(readLine()!)!
+            let intIn = intInF()
             print(countPrimes(int: intIn))
         }
         
