@@ -114,6 +114,7 @@ if(CommandLine.argc > 1){
 
 
 while(!exit){
+    print("============================================")
     print("Options Menu:")
     print("Type the number in order to select")
     print("0. Exit")
@@ -121,8 +122,17 @@ while(!exit){
     print("2. Function 2: Multiply by 5")
     print("3. Function 3: Multiply by 10")
     print("4. Function 4: Floor")
-
-
+    print("5. Function 5: Ceiling")
+    print("6. Function 6: Double String")
+    print("7. Function 7: Repeat String")
+    print("8. Function 8: Int to String")
+    print("9. Function 9: Double to String")
+    print("10. Function 10: Return Factorial")
+    print("11. Function 11: Fibonacci Sequence")
+    print("12. Function 12: Adds Two Squared Doubles")
+    print("13. Function 13: Is Prime")
+    print("14. Function 14: Count Primes")
+    print("============================================")
     if let inputI = readLine() {
         print("Input accepted!")
         if(inputI == "0") { print("Exiting!"); exit = true; }
@@ -131,21 +141,70 @@ while(!exit){
             let intIn = Int(readLine()!)!
             print(twiceInteger(int: intIn))
         }
-        else if(inputI == "2") { }
-        else if(inputI == "3") { }
-        else if(inputI == "4") { }
-        else if(inputI == "5") { }
-        else if(inputI == "6") { }
-        else if(inputI == "7") { }
-        else if(inputI == "8") { }
-        else if(inputI == "9") { }
-        else if(inputI == "10") { }
-        else if(inputI == "11") { }
-        else if(inputI == "12") { }
-        else if(inputI == "13") { }
-        else if(inputI == "14") { }
+        else if(inputI == "2") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(fiveInteger(int: intIn))
+        }
+        else if(inputI == "3") {
+            print("Function 3: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(tenInteger(int: intIn))
+        }
+        else if(inputI == "4") {
+            print("Function 4: Please input a double");
+            let doubleIn = Double(readLine()!)!
+            print(floor(double: doubleIn))
+        }
+        else if(inputI == "5") {
+            print("Function 5: Please input a double");
+            let doubleIn = Double(readLine()!)!
+            print(ceiling(double: doubleIn))
+        }
+        else if(inputI == "6") {
+            print("Function 6: Please input a string");
+            let stringIn = readLine()!
+            print(doubleString(string: stringIn))
+        }
+        else if(inputI == "7") {
+            print("Function 7: Please input a string");
+            let stringIn = readLine()
+            print("Please input an int");
+            let intIn = Int(readLine()!)!
+            print(repeatString(string: stringIn, times: intIn))
+        }
+        else if(inputI == "8") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))
+        }
+        else if(inputI == "9") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))}
+        else if(inputI == "10") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))}
+        else if(inputI == "11") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))}
+        else if(inputI == "12") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))}
+        else if(inputI == "13") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))}
+        else if(inputI == "14") {
+            print("Function 2: Please input an int");
+            let intIn = Int(readLine()!)!
+            print(twiceInteger(int: intIn))
+        }
         
     }
-    print("Input denied!")
+    print("============================================")
     
 }
