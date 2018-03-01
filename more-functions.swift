@@ -86,7 +86,7 @@ public func doubleString(string:String) -> String {
 
 public func repeatString(string:String, times:Int) -> String {
         var returnString = ""
-        for _ in 0...times {
+        for _ in 1...times {
                 returnString += string
             }
         return returnString; 
