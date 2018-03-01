@@ -134,7 +134,8 @@ while(!exit){
     print("14. Function 14: Count Primes")
     print("============================================")
     if let inputI = readLine() {
-        print("Input accepted!")
+        if(Int(inputI)! < 14 && Int(inputI)! >= "0") {print("Input accepted!")}
+        else{print("Input denied!")}
         if(inputI == "0") { print("Exiting!"); exit = true; }
         else if(inputI == "1") {
             print("Function 1: Please input an int");
@@ -181,25 +182,30 @@ while(!exit){
         else if(inputI == "9") {
             print("Function 9: Please input a double");
             let doubleIn = Double(readLine()!)!
-            print(doubleToString(double: doubleIn))}
+            print(doubleToString(double: doubleIn))
+        }
         else if(inputI == "10") {
             print("Function 10: Please input an int");
             let intIn = Int(readLine()!)!
-            print(returnFactorial(int: intIn))}
+            print(returnFactorial(int: intIn))
+        }
         else if(inputI == "11") {
             print("Function 11: Please input an int");
             let intIn = Int(readLine()!)!
-            print(gucci(nth: intIn))}
+            print(gucci(nth: intIn))
+        }
         else if(inputI == "12") {
             print("Function 12: Please input a double");
             let doubleInA = Double(readLine()!)!
             print("Please input a double")
             let doubleInB = Double(readLine()!)!
-            print(rightTriangle(sideA:doubleInA, sideB:doubleInB))}
+            print(rightTriangle(sideA:doubleInA, sideB:doubleInB))
+        }
         else if(inputI == "13") {
             print("Function 13: Please input an int");
             let intIn = Int(readLine()!)!
-            print(isPrime(int: intIn))}
+            print(isPrime(int: intIn))
+        }
         else if(inputI == "14") {
             print("Function 14: Please input an int");
             let intIn = Int(readLine()!)!
