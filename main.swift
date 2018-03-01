@@ -128,7 +128,7 @@ while(!exit){
         if(inputI == "0") { print("Exiting!"); exit = true; }
         else if(inputI == "1") {
             print("Function 1: Please input an int");
-            let intIn = readLine()
+            let intIn = Int(readLine()!)!
             print(twiceInteger(int: intIn))
         }
         else if(inputI == "2") { }
